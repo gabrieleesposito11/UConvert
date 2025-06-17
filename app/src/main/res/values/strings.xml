@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application515454545</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="area">AREA\n</string>
+    <string name="Lunghezza">LUNGHEZZA</string>
+    <string name="Volume">VOLUME\n</string>
+    <string name="Massa">MASSA</string>
+    <string name="Dati">DATI\n</string>
+    <string name="Velocità">VELOCITA</string>
+    <string name="Orario">ORARIO\n</string>
+    <string name="Mancia">MANCIA\n</string>
+    <string name="robot_button_description">Bottone robottino</string>
+</resources>

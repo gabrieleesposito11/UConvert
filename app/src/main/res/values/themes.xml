@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="my_primary_color">#007A7500</color>
+
+    <style name="Base.Theme.MyApplication515454545" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/my_primary_color</item>
+    </style>
+
+    <style name="Theme.MyApplication515454545" parent="Base.Theme.MyApplication515454545" />
+
+    <style name="CustomButtonStyle">
+        <item name="android:background">@drawable/square_shape</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

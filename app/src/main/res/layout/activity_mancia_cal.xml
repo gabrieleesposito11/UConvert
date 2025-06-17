@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mancia_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Heading Section -->
+    <LinearLayout
+        android:id="@+id/ll_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Mancia"
+            android:textColor="@color/textColor"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:id="@+id/editTextLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_heading"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+
+        <!-- EditText for Total Bill Amount -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_totaleConto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_rounded_input_field"
+                android:hint="From"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/tv_fromUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Percentuale"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- EditText for Tip Amount (output) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_totaleMancia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_rounded_input_field"
+                android:hint="To"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:textCursorDrawable="@null"
+                android:enabled="false" />
+
+            <TextView
+                android:id="@+id/tv_toUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Persone"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Selection Section -->
+    <LinearLayout
+        android:id="@+id/listViewLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLinearLayout"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:weightSum="2">
+
+        <!-- CardView for Percentage Selection -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_percentuale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="12dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/selectunit"
+                android:padding="4dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_percentuale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_percentuale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:text="Select Unit"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@id/tv_percentuale"
+                        android:src="@drawable/down_arrow"
+                        android:tint="@color/white" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Number of People Selection -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_persone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="24dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/selectunit"
+                android:padding="4dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_persone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_numeroPersone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:text="Select Unit"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@id/tv_numeroPersone"
+                        android:src="@drawable/down_arrow"
+                        android:tint="@color/white" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- Calculate Tip Button -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_calcolaMancia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listViewLinearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/convertUnit"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/btn_calcolaMancia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:text="Convert"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/btn_calcolaMancia"
+                    android:src="@drawable/convert" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Robot Button -->
+    <ImageButton
+        android:id="@+id/button_robot"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentStart="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/robot_button_description"
+        android:scaleType="centerInside"
+        android:src="@drawable/robot2" />
+
+</RelativeLayout>
+
+

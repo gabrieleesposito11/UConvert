@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication515454545">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication515454545"
+        tools:targetApi="31">
+
+        <!-- Dichiarazione Service musica di sottofondo -->
+        <service android:name=".MusicService" />
+
+        <!-- Activity principale -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <!-- Intent filter per l'Activity principale -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Altre activity  -->
+
+        <activity
+            android:name=".temp_cal"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".volume_cal"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".area_cal"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".lunghezza_cal"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".massa_cal"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".dati_cal"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".velocita_cal"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".orario_cal"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".mancia_cal"
+            android:parentActivityName=".MainActivity" />
+    </application>
+
+</manifest>
